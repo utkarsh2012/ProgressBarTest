@@ -14,15 +14,10 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        let view = DetailView(frame: self.view.frame)
-        view.value = 60
-        self.containerView.addSubview(view)
-    }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        let detailView = DetailView(frame: view.frame)
+        detailView.value = 60
+        containerView.addSubview(detailView)
     }
 }
 

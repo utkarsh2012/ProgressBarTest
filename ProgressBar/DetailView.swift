@@ -14,7 +14,7 @@ class DetailView: UIView {
     var value: Int?{
         didSet {
             progress(value: value!)
-            self.layoutSubviews()
+            layoutSubviews()
         }
     }
     
@@ -39,12 +39,12 @@ class DetailView: UIView {
     }
     
     func draw() {
-        self.pgBar = CustomProgressBar(width: progressContainer.bounds.width, height: progressContainer.bounds.height)
-        self.progressContainer.addSubview(self.pgBar!)
-        self.pgBar?.draw()
+        pgBar = CustomProgressBar(width: progressContainer.bounds.width, height: progressContainer.bounds.height)
+        progressContainer.addSubview(pgBar!)
+        pgBar?.draw()
     }
     
     func progress(value: Int) {
-        self.pgBar?.progress(incremented: CGFloat(value))
+        pgBar?.progress(incremented: CGFloat(value))
     }
 }
