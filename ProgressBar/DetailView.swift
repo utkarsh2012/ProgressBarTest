@@ -29,21 +29,21 @@ class DetailView: UIView {
         initSubview()
     }
     
-    func initSubview(){
+    private func initSubview(){
         let nib = UINib(nibName: "DetailView", bundle: nil)
         nib.instantiate(withOwner: self, options: nil)
         addSubview(progressContainer)
         
-        draw()
+        addProgressBar()
     }
     
-    func draw() {
+    private func addProgressBar() {
         pgBar = CustomProgressBar(width: progressContainer.bounds.width, height: progressContainer.bounds.height)
         progressContainer.addSubview(pgBar!)
-        pgBar?.draw()
+        pgBar?.configure()
     }
     
-    func progress(value: Int) {
+    private func progress(value: Int) {
         pgBar?.progress(incremented: CGFloat(value))
     }
 }

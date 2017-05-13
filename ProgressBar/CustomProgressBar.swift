@@ -37,7 +37,7 @@ class CustomProgressBar: UIView {
         super.init(coder: aDecoder)
     }
     
-    func draw() {
+    func configure() {
         let bezierPath = UIBezierPath(roundedRect: bounds, cornerRadius: viewCornerRadius)
         bezierPath.close()
         borderLayer.path = bezierPath.cgPath
