@@ -12,6 +12,9 @@
 		BFD41BF61EC76F1F00CA2580 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD41BF41EC76F1F00CA2580 /* Main.storyboard */; };
 		BFD41BF81EC76F1F00CA2580 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFD41BF71EC76F1F00CA2580 /* Assets.xcassets */; };
 		BFD41BFB1EC76F1F00CA2580 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD41BF91EC76F1F00CA2580 /* LaunchScreen.storyboard */; };
+		BFD41C031EC76FD600CA2580 /* DetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFD41C021EC76FD600CA2580 /* DetailView.xib */; };
+		BFD41C051EC76FE600CA2580 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD41C041EC76FE600CA2580 /* DetailView.swift */; };
+		BFD41C071EC770C100CA2580 /* CustomProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD41C061EC770C100CA2580 /* CustomProgressBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		BFD41BF71EC76F1F00CA2580 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BFD41BFA1EC76F1F00CA2580 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BFD41BFC1EC76F1F00CA2580 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFD41C021EC76FD600CA2580 /* DetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailView.xib; sourceTree = "<group>"; };
+		BFD41C041EC76FE600CA2580 /* DetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		BFD41C061EC770C100CA2580 /* CustomProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomProgressBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +63,12 @@
 				BFD41BF01EC76F1F00CA2580 /* AppDelegate.swift */,
 				BFD41BF21EC76F1F00CA2580 /* ViewController.swift */,
 				BFD41BF41EC76F1F00CA2580 /* Main.storyboard */,
+				BFD41C021EC76FD600CA2580 /* DetailView.xib */,
+				BFD41C041EC76FE600CA2580 /* DetailView.swift */,
 				BFD41BF71EC76F1F00CA2580 /* Assets.xcassets */,
 				BFD41BF91EC76F1F00CA2580 /* LaunchScreen.storyboard */,
 				BFD41BFC1EC76F1F00CA2580 /* Info.plist */,
+				BFD41C061EC770C100CA2580 /* CustomProgressBar.swift */,
 			);
 			path = ProgressBar;
 			sourceTree = "<group>";
@@ -124,6 +133,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFD41BFB1EC76F1F00CA2580 /* LaunchScreen.storyboard in Resources */,
+				BFD41C031EC76FD600CA2580 /* DetailView.xib in Resources */,
 				BFD41BF81EC76F1F00CA2580 /* Assets.xcassets in Resources */,
 				BFD41BF61EC76F1F00CA2580 /* Main.storyboard in Resources */,
 			);
@@ -137,7 +147,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFD41BF31EC76F1F00CA2580 /* ViewController.swift in Sources */,
+				BFD41C051EC76FE600CA2580 /* DetailView.swift in Sources */,
 				BFD41BF11EC76F1F00CA2580 /* AppDelegate.swift in Sources */,
+				BFD41C071EC770C100CA2580 /* CustomProgressBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
