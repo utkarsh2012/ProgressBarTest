@@ -21,13 +21,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vL4-9f-Qsc">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vL4-9f-Qsc">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vL4-9f-Qsc" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="8CE-bP-M85"/>
+                            <constraint firstItem="vL4-9f-Qsc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Ay1-jB-h8k"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vL4-9f-Qsc" secondAttribute="bottom" id="bez-D3-Yda"/>
+                            <constraint firstAttribute="trailing" secondItem="vL4-9f-Qsc" secondAttribute="trailing" id="yaH-5n-sua"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="containerView" destination="vL4-9f-Qsc" id="GJU-gl-c9u"/>
