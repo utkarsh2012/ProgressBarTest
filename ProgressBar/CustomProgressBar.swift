@@ -17,9 +17,9 @@ class CustomProgressBar: UIView {
     var progressLayer = CAShapeLayer()
     
     
-    public init(width: CGFloat, height: CGFloat, color: CGColor?=nil, progressColor: CGColor?=nil, cornerRadius: CGFloat?=nil){
+    public init(width: CGFloat, height: CGFloat, color: CGColor? = nil, progressColor: CGColor? = nil, cornerRadius: CGFloat?=nil){
         if let radius = cornerRadius {
-            self.viewCornerRadius = radius
+            viewCornerRadius = radius
         }
         
         if let isColor = color {
@@ -37,29 +37,30 @@ class CustomProgressBar: UIView {
         super.init(coder: aDecoder)
     }
     
-    func draw(){
-        let bezierPath = UIBezierPath(roundedRect: self.bounds, cornerRadius: viewCornerRadius)
+    func configure() {
+        let bezierPath = UIBezierPath(roundedRect: bounds, cornerRadius: viewCornerRadius)
         bezierPath.close()
         borderLayer.path = bezierPath.cgPath
-        borderLayer.fillColor = self.color
+        borderLayer.fillColor = color
         borderLayer.strokeEnd = 0
-        self.layer.addSublayer(borderLayer)
+        layer.addSublayer(borderLayer)
         
         let fromPath = UIBezierPath(roundedRect: CGRect(x: 0, y: 0, width: 0, height: bounds.height), cornerRadius: viewCornerRadius)
-        self.progressLayer.path = fromPath.cgPath
-        self.progressLayer.fillColor = progressColor
-        self.borderLayer.addSublayer(self.progressLayer)
+        progressLayer.path = fromPath.cgPath
+        progressLayer.fillColor = progressColor
+        borderLayer.addSublayer(progressLayer)
     }
     
     func progress(incremented: CGFloat) {
         if incremented <= bounds.width {
             let toPath = UIBezierPath(roundedRect: CGRect(x: 0, y: 0, width: incremented + 100, height: bounds.height), cornerRadius: viewCornerRadius)
             
+            let fromPath = progressLayer.path
             progressLayer.path = toPath.cgPath
             borderLayer.addSublayer(progressLayer)
             
             let animation = CABasicAnimation(keyPath: "path")
-            animation.fromValue = self.progressLayer.path
+            animation.fromValue = fromPath
             animation.toValue = toPath.cgPath
             animation.duration = 3
             progressLayer.add(animation, forKey: animation.keyPath)

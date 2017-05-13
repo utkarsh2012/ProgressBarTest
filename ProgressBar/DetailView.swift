@@ -11,10 +11,9 @@ import UIKit
 class DetailView: UIView {
 
     var pgBar: CustomProgressBar?
-    var value: Int?{
+    var value: Int? {
         didSet {
             progress(value: value!)
-            self.layoutSubviews()
         }
     }
     
@@ -30,21 +29,21 @@ class DetailView: UIView {
         initSubview()
     }
     
-    func initSubview(){
+    private func initSubview(){
         let nib = UINib(nibName: "DetailView", bundle: nil)
         nib.instantiate(withOwner: self, options: nil)
         addSubview(progressContainer)
         
-        draw()
+        addProgressBar()
     }
     
-    func draw() {
-        self.pgBar = CustomProgressBar(width: progressContainer.bounds.width, height: progressContainer.bounds.height)
-        self.progressContainer.addSubview(self.pgBar!)
-        self.pgBar?.draw()
+    private func addProgressBar() {
+        pgBar = CustomProgressBar(width: progressContainer.bounds.width, height: progressContainer.bounds.height)
+        progressContainer.addSubview(pgBar!)
+        pgBar?.configure()
     }
     
-    func progress(value: Int) {
-        self.pgBar?.progress(incremented: CGFloat(value))
+    private func progress(value: Int) {
+        pgBar?.progress(incremented: CGFloat(value))
     }
 }

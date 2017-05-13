@@ -11,18 +11,20 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var containerView: UIView!
+    weak var detailView: DetailView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        let view = DetailView(frame: self.view.frame)
-        view.value = 60
-        self.containerView.addSubview(view)
+        
+        let subview = DetailView(frame: view.frame)
+        containerView.addSubview(subview)
+        detailView = subview
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        detailView?.value = 60
     }
 }
 

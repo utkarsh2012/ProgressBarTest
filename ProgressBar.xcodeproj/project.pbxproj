@@ -65,10 +65,10 @@
 				BFD41BF41EC76F1F00CA2580 /* Main.storyboard */,
 				BFD41C021EC76FD600CA2580 /* DetailView.xib */,
 				BFD41C041EC76FE600CA2580 /* DetailView.swift */,
+				BFD41C061EC770C100CA2580 /* CustomProgressBar.swift */,
 				BFD41BF71EC76F1F00CA2580 /* Assets.xcassets */,
 				BFD41BF91EC76F1F00CA2580 /* LaunchScreen.storyboard */,
 				BFD41BFC1EC76F1F00CA2580 /* Info.plist */,
-				BFD41C061EC770C100CA2580 /* CustomProgressBar.swift */,
 			);
 			path = ProgressBar;
 			sourceTree = "<group>";
@@ -313,6 +313,7 @@
 				BFD41C011EC76F1F00CA2580 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
