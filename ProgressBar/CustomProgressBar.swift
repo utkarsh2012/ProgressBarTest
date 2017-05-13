@@ -55,11 +55,12 @@ class CustomProgressBar: UIView {
         if incremented <= bounds.width {
             let toPath = UIBezierPath(roundedRect: CGRect(x: 0, y: 0, width: incremented + 100, height: bounds.height), cornerRadius: viewCornerRadius)
             
+            let fromPath = progressLayer.path
             progressLayer.path = toPath.cgPath
             borderLayer.addSublayer(progressLayer)
             
             let animation = CABasicAnimation(keyPath: "path")
-            animation.fromValue = progressLayer.path
+            animation.fromValue = fromPath
             animation.toValue = toPath.cgPath
             animation.duration = 3
             progressLayer.add(animation, forKey: animation.keyPath)

@@ -11,13 +11,20 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var containerView: UIView!
+    weak var detailView: DetailView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let subview = DetailView(frame: view.frame)
+        containerView.addSubview(subview)
+        detailView = subview
+    }
 
-        let detailView = DetailView(frame: view.frame)
-        detailView.value = 60
-        containerView.addSubview(detailView)
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        detailView?.value = 60
     }
 }
 

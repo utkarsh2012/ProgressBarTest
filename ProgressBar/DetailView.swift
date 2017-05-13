@@ -11,10 +11,9 @@ import UIKit
 class DetailView: UIView {
 
     var pgBar: CustomProgressBar?
-    var value: Int?{
+    var value: Int? {
         didSet {
             progress(value: value!)
-            layoutSubviews()
         }
     }
     
